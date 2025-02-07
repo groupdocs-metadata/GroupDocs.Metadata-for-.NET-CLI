@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GroupDocs.Metadata.Cli.Tests.Docker": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

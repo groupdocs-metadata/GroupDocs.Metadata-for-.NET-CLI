@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<Version>25.2.0</Version>
+		<AssemblyName>groupdocs-metadata</AssemblyName>
+		<StrongNameKeyId>GroupDocsMetadataCli</StrongNameKeyId>
+		<SignAssembly>true</SignAssembly>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>GroupDocs.Metadata.Cli</RootNamespace>
+		<PackageId>GroupDocs.Metadata-CLI</PackageId>
+		<IsPackable>true</IsPackable>
+		<PackAsTool>true</PackAsTool>
+		<ToolCommandName>groupdocs-metadata</ToolCommandName>
+		<PackageOutputPath>./nupkg</PackageOutputPath>
+		<NuspecProperties>version=$(Version)</NuspecProperties>
+		<NuspecFile>groupdocs-metadata-cli.nuspec</NuspecFile>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<PackageIcon>images\icon.png</PackageIcon>
+		<PreserveCompilationContext>true</PreserveCompilationContext>
+		<PreserveCompilationReferences>true</PreserveCompilationReferences>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+	<Target DependsOnTargets="BuildOnlySettings;ResolveReferences" Name="CopyProjectReferencesToPackage">
+		<ItemGroup>
+			<BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+		</ItemGroup>
+	</Target>
+
+	<PropertyGroup>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Enums\**" />
+	  <EmbeddedResource Remove="Enums\**" />
+	  <None Remove="Enums\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="GroupDocs.Metadata" Version="25.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Resources\icon.png" Pack="true" Visible="false" PackagePath="images\icon.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\GroupDocs.Metadata.Cli.Common\GroupDocs.Metadata.Cli.Common.csproj" />
+		<ProjectReference Include="..\GroupDocs.Metadata.Cli.Utils\GroupDocs.Metadata.Cli.Utils.csproj" />
+	</ItemGroup>
+</Project>

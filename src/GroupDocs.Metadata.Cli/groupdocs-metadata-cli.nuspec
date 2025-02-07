@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>GroupDocs.Metadata-CLI</id>
+    <version>$version$</version>
+    <authors>GroupDocs</authors>
+    <owners>GroupDocs</owners>
+    <projectUrl>https://github.com/groupdocs-metadata-app/GroupDocs.Metadata-for-.NET-CLI</projectUrl>
+    <icon>Resources\icon.png</icon>
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>
+		GroupDocs.Metadata CLI - dotnet tool to read and edit metadata associated with various document, image, audio, video and many other formats. It works with most notable metadata standards: XMP, EXIF, IPTC, Image Resource Blocks, ID3 and format-specific metadata properties.
+		
+		For more details on the GroupDocs.Metadata for .NET API, please visit product website at:
+		https://products.groupdocs.com/metadata
+
+		Note: GroupDocs.Metadata for .NET will run in evaluation mode. In order to test full features of the product, please request a free 30-day temporary license.
+
+	</description>
+   <summary>View and edit documents metadata, intuitive and powerful GroupDocs.Metadata dotnet tool CLI.</summary>
+   <copyright>©Aspose Pty Ltd 2001-2025. All Rights Reserved.</copyright>
+   <tags>
+	   metadata edit-metadata read-metadata track-changes document-properties metadata-cleaner metadata-cleanup remove-metadata search-metadata compare-metadata XMP-editor MIME MIME-type torrent opentype word DOC DOCX XLS XLSX powerpoint PPT PPTX visio VSD VSDX MPP ONE ODP ODS ODT PDF DWG EML MSG BMP DJVU JPG PSD TIFF MP3 WAV AVI FLV MKV QT EPUB OTF TTF ZIP HEIF
+   </tags>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+  </metadata>
+  <files>
+  <file src="Resources\icon.png" target="Resources\" />
+    <file src="obj\DotnetToolSettings.xml" target="tools\net6.0\any\DotnetToolSettings.xml" />
+    <file src="bin\Release\net6.0\publish\**" target="tools\net6.0\any" />
+  </files>
+</package>
