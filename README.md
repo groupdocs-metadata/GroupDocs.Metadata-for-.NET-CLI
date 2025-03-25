@@ -25,10 +25,10 @@ groupdocs-metadata export source.docx
 Set `output-format` parameter value to `JSON` to export properties to JSON file:
 
 ```bash
-groupdocs-metadata view source.docx --output-format JSON
+groupdocs-metadata export source.docx --output-format JSON
 ```
 
-The `--help` or `view --help` option provides more detail about each parameter. \
+The `--help` or `export --help` option provides more detail about each parameter. \
 The `--version` option provides information about CLI version in use.
 
 ## Commands
@@ -79,7 +79,7 @@ The `--version` option provides information about CLI version in use.
 
 * `--password` [short: `-pwd`]: Password to open password-protected file.
 
-* `--output-format` [short: `-f`]: Output format, supported values are `Html`, `HtmlExt`, `Png`, `Jpg`, and `Pdf`.
+* `--output-format` [short `-f`]: Output format, supported values are `Xml`, `Csv`, `Json`, `Xls`, and `Xlsx`.
 
 * `--verbose` [short `-v`]: Enable detailed logging to console.
 
