@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GroupDocs.Metadata" Version="25.1.0" />
+    <PackageReference Include="GroupDocs.Metadata" Version="25.6.0" />
   </ItemGroup>
 
   <ItemGroup>
